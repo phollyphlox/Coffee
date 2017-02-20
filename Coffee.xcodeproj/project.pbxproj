@@ -14,6 +14,8 @@
 		8465393D1E5B7C2600B57D74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8465393B1E5B7C2600B57D74 /* LaunchScreen.storyboard */; };
 		846539481E5B7C2600B57D74 /* CoffeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846539471E5B7C2600B57D74 /* CoffeeTests.swift */; };
 		846539531E5B7C2600B57D74 /* CoffeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846539521E5B7C2600B57D74 /* CoffeeUITests.swift */; };
+		846539611E5B877200B57D74 /* BlueCoffeeCup.png in Resources */ = {isa = PBXBuildFile; fileRef = 846539601E5B877200B57D74 /* BlueCoffeeCup.png */; };
+		846539631E5B878000B57D74 /* RedCoffeeCup.png in Resources */ = {isa = PBXBuildFile; fileRef = 846539621E5B878000B57D74 /* RedCoffeeCup.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		8465394E1E5B7C2600B57D74 /* CoffeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		846539521E5B7C2600B57D74 /* CoffeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeUITests.swift; sourceTree = "<group>"; };
 		846539541E5B7C2600B57D74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846539601E5B877200B57D74 /* BlueCoffeeCup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueCoffeeCup.png; sourceTree = "<group>"; };
+		846539621E5B878000B57D74 /* RedCoffeeCup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedCoffeeCup.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				846539361E5B7C2600B57D74 /* Main.storyboard */,
 				846539391E5B7C2600B57D74 /* Assets.xcassets */,
 				8465393B1E5B7C2600B57D74 /* LaunchScreen.storyboard */,
+				846539601E5B877200B57D74 /* BlueCoffeeCup.png */,
+				846539621E5B878000B57D74 /* RedCoffeeCup.png */,
 				8465393E1E5B7C2600B57D74 /* Info.plist */,
 			);
 			path = Coffee;
@@ -232,7 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846539611E5B877200B57D74 /* BlueCoffeeCup.png in Resources */,
 				8465393D1E5B7C2600B57D74 /* LaunchScreen.storyboard in Resources */,
+				846539631E5B878000B57D74 /* RedCoffeeCup.png in Resources */,
 				8465393A1E5B7C2600B57D74 /* Assets.xcassets in Resources */,
 				846539381E5B7C2600B57D74 /* Main.storyboard in Resources */,
 			);
