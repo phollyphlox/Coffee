@@ -11,8 +11,9 @@ import UIKit
 class ViewController: UIViewController {
 
     var cupCount = 0
-    var message:String = ""
+    var message = ""
     var price = 0.0
+    var orders = ["Order:"]
     
     @IBOutlet weak var cupStackView: UIStackView!
     @IBOutlet weak var orderLabel: UILabel!
@@ -36,6 +37,7 @@ class ViewController: UIViewController {
     @IBAction func addcup(_ sender: AnyObject) {
         cupCount += 1
         price += 1.99
+        message = ""
         let cupImage = UIImageView(image: UIImage(named: "RedCoffeeCup"))
         cupImage.contentMode = .scaleAspectFit
         UIView.animate(withDuration: 0.75, animations: {
@@ -43,22 +45,27 @@ class ViewController: UIViewController {
             self.cupStackView.layoutIfNeeded()
         })
         if iceSwitch.isOn {
-            orderLabel.text?.append("\nIced Coffee")
+            message += "\nIced Coffee"
         }
         else{
-           orderLabel.text?.append("\nBlack Coffee")
+           message += "\nBlack Coffee"
         }
         if milkSwitch.isOn{
-            orderLabel.text?.append(", Milk")
+            message += ", Milk"
         }
         if sugarSwitch.isOn{
-            orderLabel.text?.append(", Sugar")
+            message += ", Sugar"
         }
         if decafSwitch.isOn {
-            orderLabel.text?.append(", Decaf")
+            message += ", Decaf"
         }
-        
-        
+        orders += [message]
+        message = ""
+        orderLabel.text = ""
+        for index in 0 ... orders.count - 1 {
+            message = orders[index]
+            orderLabel.text?.append(message)
+        }
     }
     
     @IBAction func removeCup(_ sender: AnyObject) {
@@ -73,11 +80,20 @@ class ViewController: UIViewController {
                 self.cupStackView.layoutIfNeeded()
             })
         }
-        orderLabel.text?.append(" - removed")
+        let lastIndex = orders.count - 1
+        orders.remove(at: lastIndex)
+        message = ""
+        orderLabel.text = ""
+        for index in 0 ... orders.count - 1 {
+            message = orders[index]
+            orderLabel.text?.append(message)
+        }
+
     }
 
     @IBAction func doneButton(_ sender: AnyObject) {
-        orderLabel.text?.append("\nYour total is $\(price)")
+        orderLabel.text?.append("\nYour total is $\(price)\n")
+        orderLabel.text?.append("Thank you")
     }
 }
 
